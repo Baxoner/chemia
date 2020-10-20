@@ -6,7 +6,7 @@
     <script>
         function checkAnswers()
         {
-            let odp = ["K", "tlenowców", "16", "3", "32", "3", "1", "s", "0", "1", "4", "2", "3"];
+            let odp = ["K", "tlenowców", "16", "3", "32", "6", "1", "s", "0", "0", "1", "4", "2", "3"];
             let odp1 = document.forms["formularz"]["z1"].value;
             let odp2 = document.forms["formularz"]["snazwagrupy"].value;
             let odp3 = document.forms["formularz"]["sgrupa"].value;
@@ -16,14 +16,15 @@
             let odp7 = document.forms["formularz"]["czymetal"].value;
             let odp8 = document.forms["formularz"]["blokkonf"].value;
             let odp9 = document.forms["formularz"]["aktywnosc"].value;
-            let odp10 = document.forms["formularz"]["4a"].value;
-            let odp11 = document.forms["formularz"]["4b"].value;
-            let odp12 = document.forms["formularz"]["4c"].value;
-            let odp13 = document.forms["formularz"]["4d"].value;
+            let odp10 = document.forms["formularz"]["powloki"].value;
+            let odp11 = document.forms["formularz"]["4a"].value;
+            let odp12 = document.forms["formularz"]["4b"].value;
+            let odp13 = document.forms["formularz"]["4c"].value;
+            let odp14 = document.forms["formularz"]["4d"].value;
             
             
             console.log(odp1 + "\n" + odp2 + "\n" + odp3 + "\n" + odp4 + "\n" + odp5 + "\n" + odp6 + "\n" + odp7 + "\n" + odp8 + "\n" + odp9 + "\n" + odp10 + "\n" + odp11 + "\n" + odp12);
-            if (odp1 == odp[0] && odp2 == odp[1] && odp3 == odp[2] && odp4 == odp[3] && odp5 == odp[4] && odp6 == odp[5] && odp7 == odp[6] && odp8 == odp[7] && odp9 == odp[8] && odp10 == odp[9] && odp11 == odp[10] && odp12 == odp[11] && odp13 == odp[12]) {
+            if (odp1 == odp[0] && odp2 == odp[1] && odp3 == odp[2] && odp4 == odp[3] && odp5 == odp[4] && odp6 == odp[5] && odp7 == odp[6] && odp8 == odp[7] && odp9 == odp[8] && odp10 == odp[9] && odp11 == odp[10] && odp12 == odp[11] && odp13 == odp[12] && odp14 == odp[13]) {
                 alert("Odpowiedzi są prawidłowe!");
                 return false;
             }
@@ -64,8 +65,8 @@
                     <p>Wapń:</p>
                     jest metalem <select name="czymetal"><option value="1">prawda</option><option value="0">fałsz</option></select><br>
                     znajduje się w bloku konfiguracyjnym <select name="blokkonf"><option value="p">p</option><option value="d">d</option><option value="s">s</option></select><br>
-                    jest mniej aktywny chemicznie niż beryl <select name="aktywnosc"><option value="1">prawda</option><option value="0">fałsz</option></select>
-                    posiada 
+                    jest mniej aktywny chemicznie niż beryl <select name="aktywnosc"><option value="1">prawda</option><option value="0">fałsz</option></select><br>
+                    posiada 4 powłoki elektronowe oraz 2 elektrony walencyjne<select name="powloki"><option value="1">prawda</option><option value="0">fałsz</option></select>
                     
 
                     </fieldset><br>
