@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Karta pracy</title>
+    <script>
+        function checkAnswers()
+        {
+            let odp = ["K", "tlenowców", "16", "3", "32", "3", "1", "p", "0", "1", "4", "2", "3"];
+            let odp1 = document.forms["formularz"]["z1"].value;
+            let odp2 = document.forms["formularz"]["snazwagrupy"].value;
+            let odp3 = document.forms["formularz"]["sgrupa"].value;
+            let odp4 = document.forms["formularz"]["ogrupa"].value;
+            let odp5 = document.forms["formularz"]["matomowa"].value;
+            let odp6 = document.forms["formularz"]["liczbae"].value;
+            let odp7 = document.forms["formularz"]["czymetal"].value;
+            let odp8 = document.forms["formularz"]["blokkonf"].value;
+            let odp9 = document.forms["formularz"]["aktywnosc"].value;
+            let odp10 = document.forms["formularz"]["4a"].value;
+            let odp11 = document.forms["formularz"]["4b"].value;
+            let odp12 = document.forms["formularz"]["4c"].value;
+            let odp13 = document.forms["formularz"]["4d"].value;
+            
+            
+            console.log(odp1 + "\n" + odp2 + "\n" + odp3 + "\n" + odp4 + "\n" + odp5 + "\n" + odp6 + "\n" + odp7 + "\n" + odp8 + "\n" + odp9 + "\n" + odp10 + "\n" + odp11 + "\n" + odp12);
+            if (odp1 == odp[0] && odp2 == odp[1] && odp3 == odp[2] && odp4 == odp[3] && odp5 == odp[4] && odp6 == odp[5] && odp7 == odp[6] && odp8 == odp[7] && odp9 == odp[8] && odp10 == odp[9] && odp11 == odp[10] && odp12 == odp[11] && odp13 == odp[12]) {
+                alert("Odpowiedzi są prawidłowe!");
+                return false;
+            }
+            else
+            {
+                alert("Odpowiedzi są niepoprawne")
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <form action="odpowiedzi.html" name="formularz" onsubmit="return checkAnswers()">
+            <fieldset style="width: max-content;">
+                <legend>Karta pracy</legend>
+                <fieldset>
+                    <legend>Zadanie 1: z listy rozwijanej zaznacz prawidłową odpowiedź</legend>
+                    <p>Jest litowcem i ma liczba atomową o wartości 19</p>
+                    <select name="z1">
+                        <option value="Li">Lit</option>
+                        <option value="Na">Sód</option>
+                        <option value="K">Potas</option>
+                        <option value="Rb">Rubid</option>
+                        <option value="Cs">Cez</option>
+                        <option value="Ca">Wapń</option>
+                        <option value="Mg">Magnez</option>
+                    </select>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Zadanie 2: uzupełnij tekst</legend>
+                    <p>Siarka jest w grupie <input type="text" name="snazwagrupy" maxlength="9" size="9" value="">. Leży w <input type="number" name="sgrupa" min="1" max="18" size="2" value=""> grupie oraz <input type="number" name="ogrupa" min="1" max="7" size="1" value=""> okresie.<br>Masa atomowa wynosi <input type="number" name="matomowa" min="1" max="99" value="" size="2">u, a ilość elektronów walencyjnych to <input type="number" name="liczbae" min="1" max="7" value="" size="1">.</p>
+                </fieldset><br>
+                <fieldset>
+                    
+                    <legend>Zadanie 3: zaznacz poprawne odpowiedzi</legend>
+                    <p>Wapń:</p>
+                    jest metalem <select name="czymetal"><option value="1">prawda</option><option value="0">fałsz</option></select><br>
+                    znajduje się w bloku konfiguracyjnym <select name="blokkonf"><option value="p">p</option><option value="d">d</option><option value="s">s</option></select><br>
+                    jest mniej aktywny chemicznie niż beryl <select name="aktywnosc"><option value="1">prawda</option><option value="0">fałsz</option></select>
+                    posiada 
+                    
+
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Zadanie 4: dopasuj pierwiastki do ich wzorów</legend>
+                        <table style="width: 300px; text-align: center;">
+                            <tr>
+                                <td>a) tlen</td>
+                                <td>1) K2 L6</td>
+                            </tr>
+                            <tr>
+                                <td>b) beryl</td>
+                                <td>2) 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td>c) krzem</td>
+                                <td>3) 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>3</sup></td>
+                            </tr>
+                            <tr>
+                                <td>d) azot</td>
+                                <td>4) K2 L2</td>
+                            </tr>
+                        </table><br>
+                        a) <select name="4a"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select><br>
+                        b) <select name="4b"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select><br>
+                        c) <select name="4c"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select><br>
+                        d) <select name="4d"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select><br>
+                    </fieldset>
+                <br><br><input type="submit" value="sprawdź poprawność odpowiedzi">
+            </fieldset>
+        </form>
+        <p>Strona stworzona przez Bartosza R.</p>
+    </div>
+</body>
+</html>
