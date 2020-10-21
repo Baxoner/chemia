@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Karta pracy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <script>
         function checkAnswers()
         {
@@ -22,21 +23,23 @@
             let odp13 = document.forms["formularz"]["4c"].value;
             let odp14 = document.forms["formularz"]["4d"].value;
             
+            let wynik = Boolean(odp1 == odp[0]) + Boolean(odp2 == odp[1]) + Boolean(odp3 == odp[2]) + Boolean(odp4 == odp[3]) + Boolean(odp5 == odp[4]) + Boolean(odp6 == odp[5]) + Boolean(odp7 == odp[6]) + Boolean(odp8 == odp[7]) + Boolean(odp9 == odp[8]) + Boolean(odp10 == odp[9]) + Boolean(odp11 == odp[10]) + Boolean(odp12 == odp[11]) + Boolean(odp13 == odp[12]) + Boolean(odp14 == odp[13]);
+            let wynikproc = Math.round(100/14*wynik);            
             
             console.log(odp1 + "\n" + odp2 + "\n" + odp3 + "\n" + odp4 + "\n" + odp5 + "\n" + odp6 + "\n" + odp7 + "\n" + odp8 + "\n" + odp9 + "\n" + odp10 + "\n" + odp11 + "\n" + odp12);
             if (odp1 == odp[0] && odp2 == odp[1] && odp3 == odp[2] && odp4 == odp[3] && odp5 == odp[4] && odp6 == odp[5] && odp7 == odp[6] && odp8 == odp[7] && odp9 == odp[8] && odp10 == odp[9] && odp11 == odp[10] && odp12 == odp[11] && odp13 == odp[12] && odp14 == odp[13]) {
-                alert("Odpowiedzi są prawidłowe!");
+                alert("Odpowiedzi są prawidłowe! \n Wynik wynosi: " + wynik + " punktów (" + wynikproc + "%)");
                 return false;
             }
             else
             {
-                alert("Odpowiedzi są niepoprawne")
+                alert("Odpowiedzi są niepoprawne \nWynik wynosi: " + wynik + " punktów (" + wynikproc + "%)");
                 return false;
             }
         }
     </script>
 </head>
-<body>
+<body style="font-family: 'Lato', sans-serif;">
     <div id="container">
         <form action="odpowiedzi.html" name="formularz" onsubmit="return checkAnswers()">
             <fieldset style="width: max-content;">
